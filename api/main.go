@@ -1,4 +1,4 @@
-package main
+package handler
 
 import (
 	"fmt"
@@ -23,7 +23,7 @@ func getStatusGo(c *gin.Context) {
 
 const Constant string = "Go Constant"
 
-func main() {
+func Handler() {
 	fmt.Println("go build go.go")
 
 	var variable = "Go"
