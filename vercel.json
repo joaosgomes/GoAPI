@@ -1,0 +1,14 @@
+{
+    "trailingSlash": false,
+    "rewrites": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ],
+    "build": {
+        "env": {
+            "GO_BUILD_FLAGS": "-ldflags '-s -w'"
+        }
+    }
+}
