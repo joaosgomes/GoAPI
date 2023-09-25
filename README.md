@@ -12,7 +12,7 @@ go get .
 
 
 
-go run go.go 
+go run main.go 
 
 OR
 
