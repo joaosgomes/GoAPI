@@ -31,3 +31,11 @@ git branch -M main
 git remote add origin https://github.com/joaosgomes/GoAPI.git
 git push -u origin main
 ````
+
+# EndPoints:
+
+[goapi.joaosgomes.repl.co/](https://goapi.joaosgomes.repl.co/)
+
+[goapi.joaosgomes.repl.co/status](https://goapi.joaosgomes.repl.co/status)
+
+[goapi.joaosgomes.repl.co/redirect](https://goapi.joaosgomes.repl.co/redirect)
