@@ -40,5 +40,5 @@ func main() {
 	router.GET("/redirect", getRedirectGo)
 	router.GET("/status", getStatusGo)
 
-	router.Run("localhost:3000")
+	router.Run("0.0.0.0:3000")
 }
