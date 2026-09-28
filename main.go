@@ -35,6 +35,8 @@ func getHTML(c *gin.Context) {
 </html>`))
 }
 
+
+
 const Constant string = "Go Constant"
 
 func main() {
@@ -54,5 +56,10 @@ func main() {
 	router.GET("/redirect", getRedirectGo)
 	router.GET("/status", getStatusGo)
     router.GET("/html", getHTML)
+	router.GET("/debug/o2o", func(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+			"cf-connecting-o2o": c.GetHeader("Cf-Connecting-O2o"),
+		})
+	})
 	router.Run("0.0.0.0:3000")
 }
