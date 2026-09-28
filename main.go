@@ -21,6 +21,20 @@ func getStatusGo(c *gin.Context) {
 	})
 }
 
+func getHTML(c *gin.Context) {
+	c.Data(http.StatusOK, "text/html; charset=utf-8", []byte(`<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML test</title>
+</head>
+<body>
+	<h1>HTML test page</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</body>
+</html>`))
+}
+
 const Constant string = "Go Constant"
 
 func main() {
@@ -39,6 +53,6 @@ func main() {
 	router.GET("/", getGo)
 	router.GET("/redirect", getRedirectGo)
 	router.GET("/status", getStatusGo)
-
+    router.GET("/html", getHTML)
 	router.Run("0.0.0.0:3000")
 }
